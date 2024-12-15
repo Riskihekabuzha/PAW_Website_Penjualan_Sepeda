@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website penjualan sepeda dengan konsep PWA">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="manifest" href="manifest.json">
+    <title>Toko Sepeda</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Toko Sepeda Online</h1>
+        <p>Temukan sepeda terbaik untuk aktivitasmu!</p>
+    </header>
+
+    <!-- Daftar Sepeda -->
+    <main>
+        <section class="bike-list">
+            <article class="bike">
+                <img src="images/bike1.jpg" alt="Sepeda Gunung">
+                <h2>Sepeda Gunung</h2>
+                <p>Harga: Rp 3.500.000</p>
+                <button>Beli Sekarang</button>
+            </article>
+            <article class="bike">
+                <img src="images/bike2.jpg" alt="Sepeda Lipat">
+                <h2>Sepeda Lipat</h2>
+                <p>Harga: Rp 2.000.000</p>
+                <button>Beli Sekarang</button>
+            </article>
+            <article class="bike">
+                <img src="images/bike3.jpg" alt="Sepeda Balap">
+                <h2>Sepeda Balap</h2>
+                <p>Harga: Rp 5.000.000</p>
+                <button>Beli Sekarang</button>
+            </article>
+            <article class="bike">
+                <img src="images/bike4.jpg" alt="Sepeda Anak">
+                <h2>Sepeda Anak</h2>
+                <p>Harga: Rp 1.500.000</p>
+                <button>Beli Sekarang</button>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Toko Sepeda Online. Semua hak dilindungi.</p>
+    </footer>
+
+    <!-- Script untuk Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(function (registration) {
+                    console.log('Service Worker berhasil terdaftar:', registration);
+                })
+                .catch(function (error) {
+                    console.log('Pendaftaran Service Worker gagal:', error);
+                });
+        }
+    </script>
+</body>
+</html>
